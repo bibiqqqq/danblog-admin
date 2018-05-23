@@ -1,0 +1,25 @@
+.add-article {
+  margin-top: 50px;
+}
+.add-article .title,
+.add-article .tag,
+.add-article .content {
+  margin-bottom: 30px;
+}
+.add-article .title span,
+.add-article .tag span,
+.add-article .content span {
+  display: inline-block;
+  width: 100px;
+  vertical-align: top;
+}
+
+.add-article .title .input{
+  width: 400px;
+}
+.add-article .tag .input{
+  width: 400px;
+}
+.add-article .content .input{
+  width: 800px;
+}

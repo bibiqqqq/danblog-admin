@@ -1,0 +1,26 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.index {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.index .slider {
+  text-align: center;
+  padding-top: 200px;
+  width: 150px;
+}
+
+.index .slider .text {
+  display: block;
+  cursor: pointer;
+  color: #409EFF;
+  padding: 20px 0;
+}
+.index .content {
+  flex: 1;
+}

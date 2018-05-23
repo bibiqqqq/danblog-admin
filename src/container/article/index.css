@@ -1,0 +1,22 @@
+.article {
+  margin-top: 50px; 
+}
+.article .article-item {
+  height: 30px;
+  line-height: 30px;
+}
+.article .article-item span {
+  padding-right: 20px; 
+}
+.article .article-item span:first-of-type {
+  color: #409EFF;
+}
+.article .article-item .update-btn {
+  height: 30px;
+  width: 90px;
+  margin-right: 20px;
+}
+.article .article-item .delete-btn {
+  height: 30px;
+  width: 64px;
+}
