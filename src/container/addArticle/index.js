@@ -1,7 +1,6 @@
 import React from 'react'
 import "./index.css"
-import axios from 'axios'
-import url from '../../config'
+import getArticle from '../../api/article'
 import { Button, Input } from 'antd'
 const { TextArea } = Input
 export default class AddArticle extends React.Component {
@@ -21,7 +20,7 @@ export default class AddArticle extends React.Component {
     })
   }
   async handleConfirm () {
-    await axios.post(`${url}/article/create`, {...this.state})
+    await getArticle.createArticle({ ...this.state })
     this.setState({content: ''})
   }
 

@@ -11,7 +11,7 @@ ReactDOM.render(
     <Switch>
       <Route path="/article" component={Index}></Route>
       <Route path="/login" component={Login}></Route>
-      <Redirect to="/article"/>
+      <Redirect to="/login"/>
     </Switch>
   </BrowserRouter>, 
   document.getElementById('root')

@@ -1,6 +1,5 @@
 import React from 'react'
-import axios from 'axios'
-import url from '../../config'
+import getArticle from '../../api/article'
 import "./index.css"
 import { Button } from 'antd'
 class Article extends React.Component {
@@ -13,21 +12,16 @@ class Article extends React.Component {
   componentWillMount () {
     this.getArticleList()
   }
-  handleDeleteArticle (id) {
-    axios.post(`${url}/article/${id}/remove`)
-      .then(res => {
-        this.getArticleList()
-      })
+  async handleDeleteArticle (id) {
+    await getArticle.removeArticle({_id: id})
+    this.getArticleList()
   }
   handleUpdateArticle (id) {
     
   }
-  getArticleList () {
-    axios.get(`${url}/article/list`, { params: { pageSize: 100 } })
-      .then(res => {
-        this.setState({ articles: res.data.data.list })
-      })
-      .catch(e => console.log(e))
+  async getArticleList () {
+    const res = await getArticle.getArticleList({ pageSize: 100 })
+    this.setState({ articles: res.data.data.list })
   }
   render() {
     const articles = this.state.articles
